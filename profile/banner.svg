@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Clank Security">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="1" stop-color="#16102a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3d6e"/>
+      <stop offset="1" stop-color="#ff9a3d"/>
+    </linearGradient>
+    <linearGradient id="title" gradientUnits="userSpaceOnUse" x1="295" y1="0" x2="590" y2="0">
+      <stop offset="0" stop-color="#ff3d6e"/>
+      <stop offset="1" stop-color="#ff9a3d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#ff3d6e" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ff3d6e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <style>
+      .pulse { animation: pulse 2.4s ease-in-out infinite; }
+      .d1 { animation-delay: .4s } .d2 { animation-delay: .8s } .d3 { animation-delay: 1.2s }
+      .d4 { animation-delay: 1.6s } .d5 { animation-delay: 2s }
+      @keyframes pulse { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0 } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#grid)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#glow)"/>
+
+  <!-- Network of agents -->
+  <g stroke="#ff6b8a" stroke-opacity="0.35" stroke-width="1.5">
+    <line x1="930" y1="180" x2="820" y2="90"/>
+    <line x1="930" y1="180" x2="1060" y2="95"/>
+    <line x1="930" y1="180" x2="800" y2="260"/>
+    <line x1="930" y1="180" x2="1075" y2="265"/>
+    <line x1="930" y1="180" x2="940" y2="305"/>
+    <line x1="820" y1="90" x2="1060" y2="95" stroke-dasharray="4 6"/>
+    <line x1="800" y1="260" x2="940" y2="305" stroke-dasharray="4 6"/>
+  </g>
+  <g fill="#ff9a3d">
+    <circle class="pulse"    cx="820"  cy="90"  r="7"/>
+    <circle class="pulse d1" cx="1060" cy="95"  r="7"/>
+    <circle class="pulse d2" cx="800"  cy="260" r="7"/>
+    <circle class="pulse d3" cx="1075" cy="265" r="7"/>
+    <circle class="pulse d4" cx="940"  cy="305" r="7"/>
+  </g>
+  <circle cx="930" cy="180" r="34" fill="#0b0f1a" stroke="url(#accent)" stroke-width="3"/>
+  <path d="M930 160 l16 6 v12 c0 10 -7 18 -16 22 c-9 -4 -16 -12 -16 -22 v-12 z"
+        fill="none" stroke="url(#accent)" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Text -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="80" y="150" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-1">Clank <tspan fill="url(#title)">Security</tspan></text>
+    <text x="82" y="200" font-size="24" fill="#b7bdd1">Offensive security, at scale.</text>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">
+    <rect x="80" y="236" width="300" height="44" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="100" y="264" fill="#ff9a3d">$</text>
+    <text x="120" y="264" fill="#e6e8f0">recon → scan → report</text>
+    <rect class="cursor" x="352" y="249" width="10" height="20" fill="#e6e8f0"/>
+  </g>
+</svg>
